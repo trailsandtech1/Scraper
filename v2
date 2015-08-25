@@ -1,0 +1,7 @@
+BASE_URL = https://api.github.com/users
+
+def make_soup(url):
+    html = urlopen(url).read()
+    return BeautifulSoup(html, "lxml")
+    
+    curl -s "$1" | sed 's/<[^>]*>//g' | sed -e 's/^[ \t]*//' | sed  's/&nbsp;//' | grep -srhw "[[:alnum:]_.-]\+@[[:alnum:]_.-]\+" >> emails.csv
